@@ -2,7 +2,7 @@ import {createTodo as _createTodo} from '../services/todo';
 
 export const ADD_TODO = 'ADD_TODO';
 
-export const addTodo = (todo) => ({
+export const addTodo = (todo=[]) => ({
   type: ADD_TODO,
   todo
 });

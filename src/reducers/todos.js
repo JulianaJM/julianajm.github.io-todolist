@@ -1,6 +1,6 @@
 import {ADD_TODO} from '../actions/add-todo';
 
-export default (state = [], action) => {
+const todos = (state = [], action) => {
   switch (action.type) {
     case ADD_TODO:
       return action;
@@ -8,3 +8,5 @@ export default (state = [], action) => {
       return state;
   }
 };
+
+export default todos;
