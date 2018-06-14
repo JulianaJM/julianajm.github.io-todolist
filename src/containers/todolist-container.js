@@ -1,15 +1,12 @@
 import React, {Component, Fragment} from 'react';
 import { connect } from 'react-redux'
-import {TodoList} from "../components/todoList";
+import TodoList from "../components/todoList";
 import AddTodo from "../components/add-todo";
 
 class TodoListContainer extends Component {
 
   constructor(props) {
     super(props);
-  }
-
-  componentDidMount(){
   }
 
   render() {
