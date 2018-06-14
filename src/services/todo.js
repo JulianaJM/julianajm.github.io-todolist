@@ -1,1 +1,7 @@
-export const createTodo = (todo) => { debugger; const todos = []; return todos.push(todo)};
+export const loadTodos = (todo) => {
+debugger
+  return new Promise(function(resolve, reject) {
+    debugger;
+    const todos = []; todos.push(todo);
+  })
+};

@@ -1,12 +1,19 @@
-import {createTodo as _createTodo} from '../services/todo';
+// import {loadTodos as _loadTodos} from '../services/todo';
 
 export const ADD_TODO = 'ADD_TODO';
+export const LOAD_TODOS = 'LOAD_TODOS';
 
-export const addTodo = (todo=[]) => ({
+export const addTodo = (todo) => {
+  return {
   type: ADD_TODO,
   todo
-});
+}};
 
-export const createTodo = (todo) => (dispatch) =>
-  _createTodo(todo)
-    .then(() => dispatch(addTodo(todo)));
+export const loadTodos = () => {
+  return {
+  type: LOAD_TODOS
+}};
+
+// export const loadTodos = (todo) => (dispatch) =>
+//   _loadTodos(todo)
+//     .then(() => dispatch(addTodo(todo)));

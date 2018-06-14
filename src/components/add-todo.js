@@ -2,15 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux'
 import {addTodo} from '../actions/add-todo';
 
-const AddTodo = () => {
-
+const AddTodo = (props) => {
     let input;
     const onSubmit = (e) => {
       e.preventDefault();
       if (!input.value.trim()) {
         return
       }
-      this.props.addTodo(input.value);
+      props.addTodo(input.value);
       input.value = '';
     };
     return (

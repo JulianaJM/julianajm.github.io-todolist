@@ -6,11 +6,10 @@ import AddTodo from "../components/add-todo";
 class TodoListContainer extends Component {
 
   constructor(props) {
-    super();
+    super(props);
   }
 
   componentDidMount(){
-    debugger
   }
 
   render() {
@@ -23,5 +22,9 @@ class TodoListContainer extends Component {
   }
 }
 
-const mapStateToProps = state => ({todos});
+const mapStateToProps = (state) => {
+  return {
+    todos : state.todos
+  }
+};
 export default connect(mapStateToProps)(TodoListContainer)

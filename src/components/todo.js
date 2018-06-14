@@ -7,7 +7,3 @@ export const Todo = ({ todo }) => (
     {todo}
   </li> : null
 );
-
-Todo.propTypes = {
-  task: string.isRequired
-};
