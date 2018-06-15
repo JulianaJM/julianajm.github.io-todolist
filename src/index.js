@@ -1,19 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import {Provider} from 'react-redux';
-import {createStore, applyMiddleware} from 'redux';
-import {createLogger} from 'redux-logger';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import { createLogger } from 'redux-logger';
 import rootReducer from './reducers/index';
-import TodoListContainer from "./containers/todolist-container";
+import TodoListContainer from './containers/todolist-container';
 
 const logger = createLogger();
 const store = createStore(rootReducer, applyMiddleware(logger));
 
-const Index = () => {
-  return (
+const Index = () => (
   <Provider store={store}>
-      <TodoListContainer />
-  </Provider>)
-};
+    <TodoListContainer />
+  </Provider>);
 
-ReactDOM.render(<Index />, document.getElementById("todoApp"));
+ReactDOM.render(<Index />, document.getElementById('todoApp'));

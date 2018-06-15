@@ -1,6 +1,6 @@
 # todolist
 
-A sandbox project to apply presets that i've leaned
+A sandbox project to apply presets that i've learned
 
 
 **dependencies usage reminder**
@@ -61,4 +61,11 @@ So with this, you won’t have to worry about whether you have given the same cl
 
 **Tips:**
 
-If you want to put that web-packconfig file in the different folder then use “webpack — config FOLDERNAME/webpack.config.js — mode development”
+If you want to put that webpackconfig file in the different folder then use “webpack — config FOLDERNAME/webpack.config.js — mode development”
+
+if you let "main": "index.js", in your package.json webpack will set automatically entry and output js bundle
+
+
+windaube breaklinestyle
+"linebreak-style": [0, "error", "windows"],
+git config --global core.autocrlf false

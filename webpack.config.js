@@ -7,13 +7,34 @@ const htmlPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
+  entry: {
+    main: './src/index.js'
+  },
+  output: {
+    path: __dirname + '/dist',
+    publicPath: "/",
+    filename: '[name].js'
+  },
+  devServer: {
+    contentBase: './dist'
+  },
+  // resolve: { //pour ne pas avoir a mettre des extensions dans les imports
+  //   extensions: ['.js', '.jsx']
+  // },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader"
+        }
+      },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "eslint-loader"
         }
       },
       {
@@ -34,7 +55,7 @@ module.exports = {
           }
         ]
       }
-    ]
+    ],
   },
   plugins: [htmlPlugin]
 /*  or
