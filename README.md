@@ -69,3 +69,6 @@ if you let "main": "index.js", in your package.json webpack will set automatical
 windaube breaklinestyle
 "linebreak-style": [0, "error", "windows"],
 git config --global core.autocrlf false
+
+Create a personalized and optimized webpack.config.js!
+https://webpack.jakoblind.no/
