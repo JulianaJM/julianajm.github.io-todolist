@@ -1,22 +1,24 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
+const HtmlWebPackPlugin = require('html-webpack-plugin');
+const path = require('path');
+
 
 // i can see the list of plugins I am using
 const htmlPlugin = new HtmlWebPackPlugin({
-  template: "./src/index.html",
-  filename: "./index.html" // The filename value is the name of the minified HTML that will be generated in the dist folder.
+  template: './src/index.html',
+  filename: './index.html', // The filename value is the name of the minified HTML that will be generated in the dist folder.
 });
 
 module.exports = {
   entry: {
-    main: './src/index.js'
+    main: './src/index.js',
   },
   output: {
-    path: __dirname + '/dist',
-    publicPath: "/",
-    filename: '[name].js'
+    path: path.resolve(__dirname, '/dist'),
+    publicPath: '/',
+    filename: '[name].js',
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
   },
   // resolve: { //pour ne pas avoir a mettre des extensions dans les imports
   //   extensions: ['.js', '.jsx']
@@ -27,42 +29,50 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "eslint-loader"
-        }
+          loader: 'eslint-loader',
+        },
       },
       {
         test: /\.css$/,
         use: [
           {
-            loader: "style-loader"
+            loader: 'style-loader',
           },
           {
-            loader: "css-loader",
+            loader: 'css-loader',
             options: {
               modules: true,
               importLoaders: 1,
-              localIdentName: "[name]_[local]_[hash:base64]",
+              localIdentName: '[name]_[local]_[hash:base64]',
               sourceMap: true,
-              minimize: true
-            }
-          }
-        ]
-      }
+              minimize: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader',
+        ],
+      },
     ],
   },
-  plugins: [htmlPlugin]
+  plugins: [htmlPlugin],
 /*  or
   plugins: [
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
     })
-  ]*/
+  ] */
 };
