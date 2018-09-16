@@ -33,8 +33,6 @@ class AddTodo extends React.Component {
     return (
       <div className="outer-div">
         <div className="inner-div">
-          <img src={toto} alt="postit img" />
-
           <h1> Todo list</h1>
           <section>
             <form onSubmit={this.handleSubmit} >

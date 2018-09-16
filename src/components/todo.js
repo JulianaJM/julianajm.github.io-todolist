@@ -1,14 +1,21 @@
 import React from 'react';
 import { shape, number, string, func, bool } from 'prop-types';
 
+import './todo.scss';
+
 
 export const Todo = ({ todo, onClick }) => (
   <div>
-    <li style={{ textDecoration: todo.completed ? 'line-through' : 'none' }} >
-      <input onClick={() => onClick.updateTodo(todo)} type="checkbox" />
-      {todo.desc}
-    </li>
-    <input type="button" value="X" onClick={() => onClick.removeTodo(todo)} />
+    <ul>
+      <li>
+        <label className="container" style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}> {todo.desc}
+          <input onClick={() => onClick.updateTodo(todo)} type="checkbox" />
+          <span className="checkmark" />
+        </label>
+        <input type="button" value="X" onClick={() => onClick.removeTodo(todo)} />
+      </li>
+    </ul>
+
   </div>
 );
 
