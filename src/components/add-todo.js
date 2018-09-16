@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { func } from 'prop-types';
 import classNames from 'classnames';
 import { addTodo } from '../actions/add-todo';
+import toto from './postit.jpg';
 
 import './add-todo.scss';
 
@@ -32,11 +33,13 @@ class AddTodo extends React.Component {
     return (
       <div className="outer-div">
         <div className="inner-div">
-          <h1>Todos</h1>
+          <img src={toto} alt="postit img" />
+
+          <h1> Todo list</h1>
           <section>
             <form onSubmit={this.handleSubmit} >
-              <input type="text" value={this.state.task} onChange={this.handleChange} placeholder="need something ..." />
-              <input type="submit" value="Create new task" className={classNames('link-button', { 'disabled': this.state.task === '' })} />
+              <input type="text" name="task" value={this.state.task} onChange={this.handleChange} placeholder="need something ..." />
+              <input type="submit" value="Create new task" className={classNames('link-button', { disabled: this.state.task === '' })} />
             </form>
           </section>
         </div>

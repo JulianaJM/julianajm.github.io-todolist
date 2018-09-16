@@ -8,6 +8,7 @@ const htmlPlugin = new HtmlWebPackPlugin({
   filename: './index.html', // The filename value is the name of the minified HTML that will be generated in the dist folder.
 });
 
+
 module.exports = {
   entry: {
     main: './src/index.js',
@@ -64,6 +65,25 @@ module.exports = {
           'css-loader',
           'sass-loader',
         ],
+      },
+      {
+        test: /\.(jp(e*)g|png)$/,
+        use: {
+          loader: "url-loader",
+          options: { 
+            limit: 8000, // Convert images < 8kb to base64 strings
+            name: '[name].[ext]'
+        } 
+        },
+      },
+      {
+        test: /\.(jp(e*)g|png)$/,
+        use: {
+          loader: "file-loader",
+          options: {
+            name: "[path][name].[ext]",
+          },
+        },
       },
     ],
   },
