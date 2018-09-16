@@ -5,7 +5,7 @@ import './todo.scss';
 
 
 export const Todo = ({ todo, onClick }) => (
-  <div>
+  <div className="holder">
     <ul>
       <li>
         { /* eslint-disable-next-line */ }
@@ -13,7 +13,7 @@ export const Todo = ({ todo, onClick }) => (
           <input onClick={() => onClick.updateTodo(todo)} type="checkbox" />
           <span className="checkmark" />
         </label>
-        <input type="button" value="X" onClick={() => onClick.removeTodo(todo)} />
+        <input type="button" value="X" onClick={() => onClick.removeTodo(todo)} className="site" />
       </li>
     </ul>
 
