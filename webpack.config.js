@@ -1,5 +1,5 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
-const path = require('path');
+// const path = require('path');
 
 
 // i can see the list of plugins I am using
