@@ -14,7 +14,7 @@ module.exports = {
     main: './src/index.js',
   },
   output: {
-    path: path.resolve(__dirname, '/dist'),
+    path: path.resolve(__dirname, 'dist'),
     publicPath: '/',
     filename: '[name].js',
   },
@@ -69,19 +69,19 @@ module.exports = {
       {
         test: /\.(jp(e*)g|png)$/,
         use: {
-          loader: "url-loader",
-          options: { 
+          loader: 'url-loader',
+          options: {
             limit: 8000, // Convert images < 8kb to base64 strings
-            name: '[name].[ext]'
-        } 
+            name: '[name].[ext]',
+          },
         },
       },
       {
         test: /\.(jp(e*)g|png)$/,
         use: {
-          loader: "file-loader",
+          loader: 'file-loader',
           options: {
-            name: "[path][name].[ext]",
+            name: '[path][name].[ext]',
           },
         },
       },

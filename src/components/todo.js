@@ -8,6 +8,7 @@ export const Todo = ({ todo, onClick }) => (
   <div>
     <ul>
       <li>
+        { /* eslint-disable-next-line */ }
         <label className="container" style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}> {todo.desc}
           <input onClick={() => onClick.updateTodo(todo)} type="checkbox" />
           <span className="checkmark" />

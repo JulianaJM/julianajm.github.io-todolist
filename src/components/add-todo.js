@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { func } from 'prop-types';
 import classNames from 'classnames';
 import { addTodo } from '../actions/add-todo';
-import toto from './postit.jpg';
 
 import './add-todo.scss';
 
