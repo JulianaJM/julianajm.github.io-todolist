@@ -14,12 +14,12 @@ module.exports = {
     main: './src/index.js',
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: __dirname/* path.resolve(__dirname, 'dist') */,
     publicPath: '/',
     filename: '[name].js',
   },
   devServer: {
-    contentBase: './dist',
+    contentBase: './',
   },
   // resolve: { //pour ne pas avoir a mettre des extensions dans les imports
   //   extensions: ['.js', '.jsx']
