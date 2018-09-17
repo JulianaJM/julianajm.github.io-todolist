@@ -18,8 +18,19 @@ module.exports = {
     publicPath: '/',
     filename: '[name].js',
   },
-  devServer: {
+  /* devServer: {
     contentBase: './',
+  }, */
+  devServer: {
+    contentBase: '/',
+    historyApiFallback: true,
+    // hot: true,
+    inline: true,
+    // port: 9091,
+    progress: true,
+    stats: {
+      cached: false,
+    },
   },
   // resolve: { //pour ne pas avoir a mettre des extensions dans les imports
   //   extensions: ['.js', '.jsx']
@@ -66,7 +77,7 @@ module.exports = {
           'sass-loader',
         ],
       },
-      {
+      /* {
         test: /\.(jp(e*)g|png)$/,
         use: {
           loader: 'url-loader',
@@ -75,11 +86,11 @@ module.exports = {
             name: '[name].[ext]',
           },
         },
-      },
+      }, */
       {
         test: /\.(jp(e*)g|png)$/,
         use: {
-          loader: 'file-loader',
+          loader: 'file-loader?name=/assets/images/[name].[ext]',
           options: {
             name: '[path][name].[ext]',
           },

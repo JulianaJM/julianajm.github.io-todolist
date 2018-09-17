@@ -5,7 +5,7 @@ import { Todo } from './todo';
 import { updateTodo, removeTodo } from '../actions/todo';
 
 const TodoList = ({ todos, updateTodo, removeTodo }) => (
-  <ul>
+  <ul className="todo-background">
     {todos.map(todo => (
       <Todo
         key={todo.id}
