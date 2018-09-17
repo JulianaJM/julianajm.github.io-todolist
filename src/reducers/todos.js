@@ -1,5 +1,5 @@
 import { ADD_TODO } from '../actions/add-todo';
-import { UPDATE_TODO, REMOVE_TODO } from '../actions/todo';
+import { UPDATE_TODO, REMOVE_TODO, REMOVE_ALL, /* SHOW_ALL, */ COMPLETED } from '../actions/todo';
 
 const todos = (state = [], action) => {
   switch (action.type) {
@@ -12,6 +12,16 @@ const todos = (state = [], action) => {
 
     case REMOVE_TODO:
       return state.filter(todo => action.todo.id !== todo.id);
+
+    case REMOVE_ALL:
+      return [];
+
+    /*  case SHOW_ALL:
+      return state; */
+
+    case COMPLETED:
+      return action.todos.filter(todo => todo.completed);
+
     default:
       return state;
   }
