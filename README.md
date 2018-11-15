@@ -65,7 +65,6 @@ If you want to put that webpackconfig file in the different folder then use “w
 
 if you let "main": "index.js", in your package.json webpack will set automatically entry and output js bundle
 
-
 windaube breaklinestyle
 "linebreak-style": [0, "error", "windows"],
 git config --global core.autocrlf false
