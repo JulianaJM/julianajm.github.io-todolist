@@ -1,6 +1,8 @@
 import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
-import { shape, number, string, arrayOf, bool } from 'prop-types';
+import {
+  shape, number, string, arrayOf, bool
+} from 'prop-types';
 import TodoList from '../components/todoList';
 import AddTodo from '../components/add-todo';
 

@@ -12,6 +12,7 @@ const store = createStore(rootReducer, applyMiddleware(logger));
 const Index = () => (
   <Provider store={store}>
     <TodoListContainer />
-  </Provider>);
+  </Provider>
+);
 
 ReactDOM.render(<Index />, document.getElementById('todoApp'));

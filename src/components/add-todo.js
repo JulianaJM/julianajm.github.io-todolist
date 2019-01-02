@@ -23,14 +23,18 @@ class AddTodo extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    if (!this.state.task.trim()) {
+    const { task } = this.state;
+    const { addTodo } = this.props;
+    if (!task.trim()) {
       return;
     }
-    this.props.addTodo(this.state.task);
+    addTodo(task);
     this.setState({ task: "" });
   }
 
   render() {
+    const { task } = this.state;
+
     return (
       <div className="outer-div">
         <div className="inner-div">
@@ -43,7 +47,7 @@ class AddTodo extends React.Component {
               <input
                 type="text"
                 name="task"
-                value={this.state.task}
+                value={task}
                 onChange={this.handleChange}
                 placeholder="need something ..."
                 maxLength="60"
@@ -52,7 +56,7 @@ class AddTodo extends React.Component {
                 type="submit"
                 value="Create new task"
                 className={classNames("link-button", {
-                  disabled: this.state.task === ""
+                  disabled: task === ""
                 })}
               />
             </form>
