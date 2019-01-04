@@ -72,6 +72,14 @@ npm i -g npm-check-updates
 ncu -u
 npm install
 
+
+HMR : 
+https://webpack.js.org/configuration/dev-server/
+https://webpack.js.org/guides/hot-module-replacement/
+
+images : 
+https://blog.hellojs.org/importing-images-in-react-c76f0dfcb552
+
 # Demo
 
 https://julianajm.github.io/todolist/

@@ -2,10 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { func } from "prop-types";
 import classNames from "classnames";
-import postit from "../assets/images/postit.jpg";
-
 import { addTodo } from "../actions/add-todo";
 
+import postit from "../../images/postit.jpg";
 import "./add-todo.scss";
 
 class AddTodo extends React.Component {
@@ -39,7 +38,7 @@ class AddTodo extends React.Component {
       <div className="outer-div">
         <div className="inner-div">
           <h1>
-            <img src={postit} alt="post it" width="70px" heigth="70px" />
+            <img src={postit} alt="" width="70px" heigth="70px" />
             Todo list
           </h1>
           <section>
