@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddTodo /> renders without crashing 1`] = `
+<div
+  className="outer-div"
+>
+  <div
+    className="inner-div"
+  >
+    <h1>
+      <img
+        alt=""
+        heigth="70px"
+        src={
+          Object {
+            "process": [Function],
+          }
+        }
+        width="70px"
+      />
+      My tasks list
+    </h1>
+    <section>
+      <form
+        id="write-task"
+        onSubmit={[Function]}
+      >
+        <input
+          maxLength="60"
+          name="task"
+          onChange={[Function]}
+          placeholder="need something ..."
+          type="text"
+          value=""
+        />
+        <input
+          className="link-button disabled"
+          type="submit"
+          value="Create new task"
+        />
+      </form>
+    </section>
+  </div>
+</div>
+`;

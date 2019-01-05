@@ -93,6 +93,7 @@ https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675
 https://jestjs.io/docs/en/webpack
 https://stackoverflow.com/questions/44067537/enzyme-render-fails-when-importing-image-with-webpack-while-testing-with-jest
 https://diessi.ca/blog/how-to-exclude-css-images-anything-from-unit-tests/
+https://medium.com/opendoor-labs/testing-react-components-with-jest-a7e8e4d312d8
 
 # Demo
 

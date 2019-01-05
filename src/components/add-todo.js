@@ -7,7 +7,7 @@ import { addTodo } from "../actions/add-todo";
 import postit from "../../images/postit.jpg";
 import "./add-todo.scss";
 
-class AddTodo extends React.Component {
+export class AddTodo extends React.Component {
   constructor(props) {
     super(props);
     this.state = { task: "" };

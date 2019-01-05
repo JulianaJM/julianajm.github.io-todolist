@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Todo /> renders without crashing 1`] = `
+<div
+  className="holder"
+>
+  <ul>
+    <li>
+      <label
+        className="container"
+        style={
+          Object {
+            "textDecoration": "line-through",
+          }
+        }
+      >
+         
+        totop
+        <input
+          defaultChecked={true}
+          onClick={[Function]}
+          type="checkbox"
+        />
+        <span
+          className="checkmark"
+        />
+      </label>
+      <input
+        className="site"
+        onClick={[Function]}
+        type="button"
+        value="X"
+      />
+    </li>
+  </ul>
+</div>
+`;

@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "test": "jest",
+    "test-cov": "jest --coverage --coverageDirectory=output/coverage/jest",
     "build": "rm -rf ./docs/ && webpack --mode development",
     "build:w": "webpack --watch --mode development",
     "build:prod": "rm -rf ./docs/ && webpack --mode production",
@@ -23,6 +24,10 @@
     "testPathIgnorePatterns": [
       "/node_modules/",
       "/build/"
+    ],
+    "coverageReporters": [
+      "text",
+      "html"
     ]
   },
   "repository": {
