@@ -11,10 +11,10 @@ const logger = createLogger();
 const middlewares = [thunk, logger];
 const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
-const Index = () => (
+const App = () => (
   <Provider store={store}>
     <TodoListContainer />
   </Provider>
 );
 
-ReactDOM.render(<Index />, document.getElementById('todoApp'));
+ReactDOM.render(<App />, document.getElementById('todoApp'));

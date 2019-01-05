@@ -42,7 +42,7 @@ class AddTodo extends React.Component {
             My tasks list
           </h1>
           <section>
-            <form onSubmit={this.handleSubmit}>
+            <form id="write-task" onSubmit={this.handleSubmit}>
               <input
                 type="text"
                 name="task"

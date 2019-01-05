@@ -88,6 +88,12 @@ Selectors can compute derived data, allowing Redux to store the minimal possible
 Selectors are efficient. A selector is not recomputed unless one of its arguments changes.
 Selectors are composable. They can be used as input to other selectors.
 
+jest + enzyme :
+https://medium.com/codeclan/testing-react-with-jest-and-enzyme-20505fec4675
+https://jestjs.io/docs/en/webpack
+https://stackoverflow.com/questions/44067537/enzyme-render-fails-when-importing-image-with-webpack-while-testing-with-jest
+https://diessi.ca/blog/how-to-exclude-css-images-anything-from-unit-tests/
+
 # Demo
 
 https://julianajm.github.io/todolist/

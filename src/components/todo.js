@@ -16,7 +16,7 @@ export const Todo = ({ todo, onClick }) => (
         >
           {" "}
           {todo.desc}
-          <input onClick={() => onClick.updateTodo(todo)} type="checkbox" checked={todo.completed} />
+          <input onClick={() => onClick.updateTodo(todo)} type="checkbox" defaultChecked={todo.completed} />
           <span className="checkmark" />
         </label>
         <input

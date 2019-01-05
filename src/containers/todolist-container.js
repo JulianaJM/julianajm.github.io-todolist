@@ -17,7 +17,7 @@ class TodoListContainer extends Component {
 
   showAll = () => {
     const { updateFilter } = this.props;
-    updateFilter(true);
+    updateFilter(false);
   }
 
   render() {
@@ -33,10 +33,9 @@ class TodoListContainer extends Component {
   }
 }
 
-// const mapDispatchToProps = (dispatch, ownProps) => ({
-//   updateFilter: () => dispatch(updateFilter())
-// })
-
+const mapDispatchToProps = dispatch/* , ownProps */ => ({
+  updateFilter: isFiltered => dispatch(updateFilter(isFiltered))
+});
 
 const mapStateToProps = ({ todos, completed }) => ({ todos, completed });
 
@@ -51,4 +50,4 @@ TodoListContainer.propTypes = {
   updateFilter: func.isRequired
 };
 
-export default connect(mapStateToProps, { updateFilter })(TodoListContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(TodoListContainer);

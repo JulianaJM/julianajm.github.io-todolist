@@ -12,7 +12,7 @@ const hmrPlugin = new webpack.HotModuleReplacementPlugin();
 
 module.exports = {
   entry: {
-    main: "./src/index.js"
+    main: "./src/app.js"
   },
   output: {
     path: path.resolve(__dirname, 'docs'),

@@ -19,7 +19,7 @@ const TodoList = ({
   completedTodos,
   isFiltered,
   onFilterCompleted,
-  // onFilterAll,
+  onFilterAll,
   removeAll
 }) => (
   <>
@@ -29,6 +29,9 @@ const TodoList = ({
       </button>
       <button type="button" onClick={() => removeAll()}>
         remove all
+      </button>
+      <button type="button" onClick={onFilterAll}>
+        show all
       </button>
     </div>
     <br />
@@ -62,8 +65,9 @@ TodoList.propTypes = {
   updateTodo: func.isRequired,
   removeTodo: func.isRequired,
   onFilterCompleted: func.isRequired,
+  onFilterAll: func.isRequired,
   removeAll: func.isRequired,
-  isFiltered: bool.isRequired
+  isFiltered: bool
 };
 
 const makeMapStateToProps = () => {
