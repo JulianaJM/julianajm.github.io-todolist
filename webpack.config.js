@@ -21,7 +21,7 @@ module.exports = {
   watchOptions: {
     ignored: /node_modules/,
     aggregateTimeout: 300, // The default
-    poll: 5000 // Check for changes every 5 seconds
+    poll: 1000 // Check for changes every seconds
   },
   devServer: {
     contentBase:  path.resolve(__dirname, 'docs'),/* By default it will use your current working directory to serve content. To disable contentBase set it to false */

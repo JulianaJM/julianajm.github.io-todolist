@@ -20,6 +20,7 @@ webpack.config.js file to state the rules for our loaders.
 **index.html** file in the src folder where we can add our section element with id of the main app component.
 
 **html-webpack-plugin** use in our webpack config file. This plugin generates an HTML file with <script> injected, writes this to dist/index.html, and minifies the file
+https://github.com/jantimon/html-webpack-plugin#options
 
 **webpack-dev-server**
 run this command every time you want to see your changes in the browser.
@@ -79,6 +80,13 @@ https://webpack.js.org/guides/hot-module-replacement/
 
 images : 
 https://blog.hellojs.org/importing-images-in-react-c76f0dfcb552
+
+Reselect : 
+https://github.com/reduxjs/reselect
+https://medium.com/@parkerdan/react-reselect-and-redux-b34017f8194c
+Selectors can compute derived data, allowing Redux to store the minimal possible state.
+Selectors are efficient. A selector is not recomputed unless one of its arguments changes.
+Selectors are composable. They can be used as input to other selectors.
 
 # Demo
 

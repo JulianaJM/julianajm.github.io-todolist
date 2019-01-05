@@ -1,13 +1,13 @@
-/* import { COMPLETED } from '../actions/todo';
+import { UPDATE_FILTER } from '../actions/add-todo';
 
-const completed = (state = [], action) => {
+const completed = (state = false, action) => {
   switch (action.type) {
-    case COMPLETED:
-      return action.todos.filter(todo => todo.completed);
+    case UPDATE_FILTER:
+      return action;
 
     default:
       return state;
   }
 };
 
-export default completed; */
+export default completed;

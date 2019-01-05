@@ -1,6 +1,6 @@
 import { ADD_TODO } from '../actions/add-todo';
 import {
-  UPDATE_TODO, REMOVE_TODO, REMOVE_ALL, /* SHOW_ALL, */ COMPLETED
+  UPDATE_TODO, REMOVE_TODO, REMOVE_ALL, /* SHOW_ALL, */
 } from '../actions/todo';
 
 const todos = (state = [], action) => {
@@ -20,9 +20,6 @@ const todos = (state = [], action) => {
 
       /*  case SHOW_ALL:
         return state; */
-
-    case COMPLETED:
-      return action.todos.filter(todo => todo.completed);
 
     default:
       return state;

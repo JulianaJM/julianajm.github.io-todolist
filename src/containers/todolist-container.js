@@ -1,19 +1,45 @@
-import React, { Fragment } from 'react';
-import { connect } from 'react-redux';
-import {
-  shape, number, string, arrayOf, bool
-} from 'prop-types';
-import TodoList from '../components/todoList';
-import AddTodo from '../components/add-todo';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { func } from "prop-types";
+import { updateFilter } from "../actions/add-todo";
+import TodoList from "../components/todoList";
+import AddTodo from "../components/add-todo";
 
-const TodoListContainer = ({ todos }) => (
-  <Fragment>
-    <AddTodo />
-    <TodoList todos={todos} />
-  </Fragment>
-);
+class TodoListContainer extends Component {
+  // constructor(props){
+  // super(props);
+  // }
 
-const mapStateToProps = ({ todos }) => ({ todos });
+  showCompleted = () => {
+    const { updateFilter } = this.props;
+    updateFilter(true);
+  }
+
+  showAll = () => {
+    const { updateFilter } = this.props;
+    updateFilter(true);
+  }
+
+  render() {
+    return (
+      <>
+        <AddTodo />
+        <TodoList
+          onFilterCompleted={() => this.showCompleted()}
+          onFilterAll={() => this.showAll()}
+        />
+      </>
+    );
+  }
+}
+
+// const mapDispatchToProps = (dispatch, ownProps) => ({
+//   updateFilter: () => dispatch(updateFilter())
+// })
+
+
+const mapStateToProps = ({ todos, completed }) => ({ todos, completed });
+
 // const mapStateToProps = state => ({ todos: state.todos });
 // const mapStateToProps = (state) => {
 //   return {
@@ -22,11 +48,7 @@ const mapStateToProps = ({ todos }) => ({ todos });
 // };
 
 TodoListContainer.propTypes = {
-  todos: arrayOf(shape({
-    id: number.isRequired,
-    completed: bool.isRequired,
-    desc: string.isRequired,
-  }).isRequired).isRequired,
+  updateFilter: func.isRequired
 };
 
-export default connect(mapStateToProps)(TodoListContainer);
+export default connect(mapStateToProps, { updateFilter })(TodoListContainer);

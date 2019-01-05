@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  shape, number, string, func, bool
+  shape, string, func, bool
 } from "prop-types";
 
 import "./todo.scss";
@@ -16,7 +16,7 @@ export const Todo = ({ todo, onClick }) => (
         >
           {" "}
           {todo.desc}
-          <input onClick={() => onClick.updateTodo(todo)} type="checkbox" />
+          <input onClick={() => onClick.updateTodo(todo)} type="checkbox" checked={todo.completed} />
           <span className="checkmark" />
         </label>
         <input
@@ -36,7 +36,7 @@ Todo.propTypes = {
     removeTodo: func.isRequired
   }).isRequired,
   todo: shape({
-    id: number.isRequired,
+    id: string.isRequired,
     completed: bool.isRequired,
     desc: string.isRequired
   }).isRequired

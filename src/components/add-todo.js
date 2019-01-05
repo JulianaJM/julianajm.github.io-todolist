@@ -39,7 +39,7 @@ class AddTodo extends React.Component {
         <div className="inner-div">
           <h1>
             <img src={postit} alt="" width="70px" heigth="70px" />
-            Todo list
+            My tasks list
           </h1>
           <section>
             <form onSubmit={this.handleSubmit}>
@@ -51,6 +51,7 @@ class AddTodo extends React.Component {
                 placeholder="need something ..."
                 maxLength="60"
               />
+              {/* submit button */}
               <input
                 type="submit"
                 value="Create new task"

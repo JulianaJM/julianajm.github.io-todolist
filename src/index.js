@@ -2,12 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
+import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 import rootReducer from './reducers/index';
 import TodoListContainer from './containers/todolist-container';
 
 const logger = createLogger();
-const store = createStore(rootReducer, applyMiddleware(logger));
+const middlewares = [thunk, logger];
+const store = createStore(rootReducer, applyMiddleware(...middlewares));
 
 const Index = () => (
   <Provider store={store}>
